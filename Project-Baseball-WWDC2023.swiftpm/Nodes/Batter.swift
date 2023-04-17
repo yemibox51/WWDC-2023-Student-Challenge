@@ -8,9 +8,12 @@ class Batter: SKSpriteNode, BaseballGameObjects {
     var hasSwung = false
     
     func setUp() {
+        self.name = "Bat"
         self.color = .red
         self.size = CGSize(width: 100, height: 25)
-        self.position = CGPoint(x: 260, y: 100)
+        let w = UIScreen.main.bounds.width
+//        let h = UIScreen.main.bounds.height
+        self.position = CGPoint(x: (w/2)-30, y: 100)
         self.zRotation = defaultRotation
         self.anchorPoint = CGPoint(x: 0.2, y: 0.5)
         

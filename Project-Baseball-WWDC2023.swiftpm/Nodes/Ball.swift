@@ -5,9 +5,12 @@ class Ball: SKSpriteNode, BaseballGameObjects {
     let impulseY = CGFloat(-300)
     
     func setUp() {
+        self.name = "Ball"
         self.color = .blue
         self.size = CGSize(width: 25, height: 25)
-        self.position = CGPoint(x: 300, y: 600)
+        let w = UIScreen.main.bounds.width
+        let h = UIScreen.main.bounds.height
+        self.position = CGPoint(x: w/2, y: h/2)
         
         setUpPhysics()
     }
@@ -20,8 +23,8 @@ class Ball: SKSpriteNode, BaseballGameObjects {
         self.physicsBody?.categoryBitMask = BitMask.Ball.rawValue
         
         let BatCategory = BitMask.Bat.rawValue
-        let StrikeZone  = BitMask.StrikeZone.rawValue
-        self.physicsBody?.contactTestBitMask = BatCategory | StrikeZone
+        let ZoneCategory  = BitMask.Zone.rawValue
+        self.physicsBody?.contactTestBitMask = BatCategory | ZoneCategory
     }
     
 }

@@ -1,6 +1,10 @@
 -------------------------
+Monday April 17th, 2023
+-------------------------
+- Added trigger collisions and a function to check for each one
+-------------------------
 Saturday April 15th, 2023
 -------------------------
-- Refactored all the code, decoupled and seperated things into classes
+- Refactored all the code, decoupled and separated things into classes
 - Added an umpire to keep track of game state
 - Expanded the screen size

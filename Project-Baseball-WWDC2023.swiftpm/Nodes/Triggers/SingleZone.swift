@@ -1,17 +1,18 @@
 import SpriteKit
 
-class StrikeZone: SKSpriteNode, BaseballGameObjects {
+class SingleZone: SKSpriteNode, BaseballGameObjects {
     func setUp() {
-        self.name = "StrikeZone"
-        self.color = .yellow
+        self.name = "Single"
+        self.color = .blue
         self.size  = CGSize(width: 100, height: 25)
-        self.alpha = 0
+        self.alpha = 1.0
         let w = UIScreen.main.bounds.width
-        self.position = CGPoint(x: (w/2), y: -50)
+//        let h = UIScreen.main.bounds.height
+        self.position = CGPoint(x: (w/2), y: 1000)
         
         setUpPhysics()
     }
-    
+
     private func setUpPhysics() {
         self.physicsBody = SKPhysicsBody(rectangleOf: self.size)
         self.physicsBody?.affectedByGravity = false
@@ -20,4 +21,4 @@ class StrikeZone: SKSpriteNode, BaseballGameObjects {
         self.physicsBody?.categoryBitMask = BitMask.Zone.rawValue
     }
 }
-            
+

@@ -6,10 +6,10 @@ struct ContentView: View {
         let gameScene = GameScene()
         let uiScreen = UIScreen.main.bounds
         let width = uiScreen.width //600
-        let height = uiScreen.height //600
-        gameScene.size = CGSize(width: width, height: height)
+//        let height = uiScreen.height //600
+        gameScene.size = CGSize(width: width, height: width)
         gameScene.scaleMode = .aspectFit
-        gameScene.backgroundColor = .clear
+//        gameScene.backgroundColor = .clear
         gameScene.anchorPoint = CGPoint(x: 0, y: 0)
         
         return gameScene
@@ -19,7 +19,7 @@ struct ContentView: View {
         VStack {
             Text("Baseball")
             SpriteView(scene: gameScene)
-//                .scaledToFit()
+                .scaledToFit()
                 .ignoresSafeArea()
                 .padding(5)
         }

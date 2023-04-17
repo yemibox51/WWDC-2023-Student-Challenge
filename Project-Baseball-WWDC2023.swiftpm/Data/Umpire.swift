@@ -32,6 +32,11 @@ extension Umpire {
     func addOut() {
         self.outs += 1
     }
+    func addFoul() {
+        if self.strikes < 2 {
+            self.strikes += 1
+        }
+    }
     func changeInning() {
         self.innings += 1
     }
