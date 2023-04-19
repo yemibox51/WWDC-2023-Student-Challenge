@@ -1,4 +1,8 @@
 -------------------------
+Wednesday April 19th, 2023
+-------------------------
+- Positioned everything properly
+-------------------------
 Monday April 17th, 2023
 -------------------------
 - Added trigger collisions and a function to check for each one

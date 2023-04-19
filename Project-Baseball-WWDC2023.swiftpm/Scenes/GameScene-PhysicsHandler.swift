@@ -17,7 +17,6 @@ extension GameScene {
         }
     }
     func didEnd(_ contact: SKPhysicsContact) {
-//        print("Ended")
         print(umpire.getStrike())
     }
     
@@ -35,6 +34,8 @@ extension GameScene {
             print("Got a triple")
         case "HomeRun":
             print("Got a home run")
+        case "Out":
+            print("Got an Out")
         default:
             umpire.addFoul()
         }
