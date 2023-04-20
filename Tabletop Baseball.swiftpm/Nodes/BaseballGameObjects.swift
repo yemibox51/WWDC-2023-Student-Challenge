@@ -1,0 +1,3 @@
+protocol BaseballGameObjects {
+    func setUp()
+}
