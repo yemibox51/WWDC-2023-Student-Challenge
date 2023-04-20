@@ -1,7 +1,7 @@
 import SpriteKit
 
-class Batter: SKSpriteNode, BaseballGameObjects {
-    let defaultRotation = (7*CGFloat.pi/6)
+class Bat: SKSpriteNode, BaseballGameObjects {
+    let defaultRotation = (11*CGFloat.pi/6)
     let windUpRotation = -(CGFloat.pi/2) // 90 degrees
     let impulse = CGFloat(2)
     
@@ -10,12 +10,11 @@ class Batter: SKSpriteNode, BaseballGameObjects {
     func setUp() {
         self.name = "Bat"
         self.color = .red
-        self.texture = SKTexture(imageNamed: "new_bat_wood")
-        self.size = CGSize(width: 270, height: 28)
+        self.size = CGSize(width: 120, height: 28)
         let w = UIScreen.main.bounds.width
-        self.position = CGPoint(x: (w/2)-100, y: 0)
+        self.position = CGPoint(x: (w/2)-40, y: 0)
         self.zRotation = defaultRotation
-//        self.anchorPoint = CGPoint(x: 0.2, y: 0.5)
+        self.texture = SKTexture(imageNamed: "bat_wood")
         
         setUpPhysics()
     }
@@ -32,8 +31,7 @@ class Batter: SKSpriteNode, BaseballGameObjects {
     
     
     private func setUpPhysics() {
-        let texture = SKTexture(imageNamed: "new_bat_wood")
-        self.physicsBody = SKPhysicsBody(texture: texture, alphaThreshold: 0.5, size: self.size)
+        self.physicsBody = SKPhysicsBody(rectangleOf: self.size)
         self.physicsBody?.affectedByGravity = false
         self.physicsBody?.isDynamic = true
         self.physicsBody?.allowsRotation = true

@@ -4,6 +4,7 @@ class DoubleZone: SKSpriteNode, BaseballGameObjects {
     func setUp() {
         self.name = "Double"
         self.color = .green
+        self.texture = SKTexture(imageNamed: "double")
         self.size  = CGSize(width: 338, height: 50)
         self.alpha = 1.0
         

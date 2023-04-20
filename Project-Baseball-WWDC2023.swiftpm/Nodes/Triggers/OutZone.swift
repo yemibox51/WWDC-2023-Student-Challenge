@@ -5,6 +5,7 @@ class OutZone: SKSpriteNode, BaseballGameObjects {
         self.name = "OutZone"
         self.color = .red
         self.size  = CGSize(width: 338, height: 50)
+        self.texture = SKTexture(imageNamed: "out")
         self.alpha = 1.0
         
         self.position = CGPoint(x:475, y: 1760)

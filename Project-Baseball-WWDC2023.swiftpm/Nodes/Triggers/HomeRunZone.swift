@@ -5,6 +5,7 @@ class HomeRunZone: SKSpriteNode, BaseballGameObjects {
         self.name = "HomeRun"
         self.color = .purple
         self.size  = CGSize(width: 160, height: 50)
+        self.texture = SKTexture(imageNamed: "homeRun")
         self.alpha = 1.0
         let w = UIScreen.main.bounds.width
         

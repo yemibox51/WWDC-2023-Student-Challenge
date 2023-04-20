@@ -5,6 +5,7 @@ class SingleZone: SKSpriteNode, BaseballGameObjects {
         self.name = "Single"
         self.color = .blue
         self.size = CGSize(width: 338, height: 50)
+        self.texture = SKTexture(imageNamed: "single")
         self.alpha = 1.0
 
         self.position = CGPoint(x: -170, y: 1550)

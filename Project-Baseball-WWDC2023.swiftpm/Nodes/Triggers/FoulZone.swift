@@ -1,15 +1,14 @@
 import SpriteKit
 
-class TripleZone: SKSpriteNode, BaseballGameObjects {
+class FoulZone: SKSpriteNode, BaseballGameObjects {
     func setUp() {
-        self.name = "Triple"
-        self.color = .yellow
-        self.size  = CGSize(width: 338, height: 50)
-        self.texture = SKTexture(imageNamed: "triple")
-        self.alpha = 1.0
+        self.name = "FoulZone"
+        self.color = .gray
+        self.size  = CGSize(width: 3000, height: 100)
+        self.alpha = CGFloat(1)
         
-        self.position = CGPoint(x: 140, y: 1690)
-        self.zRotation = (CGFloat.pi/10.5)
+        self.position = CGPoint(x: -57, y: 500)
+        self.zRotation = (CGFloat.pi/4)
         
         setUpPhysics()
     }
@@ -19,8 +18,7 @@ class TripleZone: SKSpriteNode, BaseballGameObjects {
         self.physicsBody?.affectedByGravity = false
         self.physicsBody?.mass = 115
         self.physicsBody?.pinned = true
-        self.physicsBody?.isDynamic = true
+        self.physicsBody?.isDynamic = false
         self.physicsBody?.categoryBitMask = BitMask.Zone.rawValue
     }
 }
-

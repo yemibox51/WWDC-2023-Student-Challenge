@@ -9,18 +9,8 @@ extension GameScene {
 //            isPitch = true
 //        }
         
-//        let windUp = SKAction.rotate(toAngle: bat.windUpRotation, duration: 0.1)
-//        bat.run(windUp) 
-        
-        if !bat.hasSwung {
-            bat.hasSwung = true
-//            bat.physicsBody?.applyAngularImpulse(bat.impulse)
-//            let move = SKAction.move(to: CGPoint(x: 50, y: 0), duration: 0.1)
-            let rotate = SKAction.applyAngularImpulse(bat.impulse, duration: 0.1)
-//            let swing = SKAction.group([move, rotate])
-            
-            bat.run(rotate)
-        }
+        let windUp = SKAction.rotate(toAngle: bat.windUpRotation, duration: 0.1)
+        bat.run(windUp) 
         
         guard let touch = touches.first else { return }
         debugTouchLocation(touch)
@@ -28,6 +18,10 @@ extension GameScene {
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        
+        if !bat.hasSwung {
+            bat.hasSwung = true
+            let swing = SKAction.applyAngularImpulse(bat.impulse, duration: 0.1)
+            bat.run(swing)
+        }
     }
 }

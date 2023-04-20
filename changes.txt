@@ -1,4 +1,15 @@
 -------------------------
+Thursday April 20th, 2023 (T-2 hours of deadline 11:59 PDT)
+-------------------------
+- Added sprites for everything
+- Foul Zone
+- Game Logic
+- Game Loop
+- Pitcher
+- Catcher
+- Fielders
+- Runners
+-------------------------
 Wednesday April 19th, 2023
 -------------------------
 - Positioned everything properly
